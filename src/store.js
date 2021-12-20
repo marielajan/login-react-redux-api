@@ -1,13 +1,14 @@
 import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
+
 
 const initialState = {
   email: undefined,
   password: undefined,
   logged: false,
   message: undefined,
-  isLogging: false,
+  isLogging: false
 }
 
 const reducer = (state = initialState, action) => {
@@ -26,22 +27,23 @@ const reducer = (state = initialState, action) => {
         logged: false,
         message: undefined
       }
-    case 'LOGIN_PENDING':
+    case 'LOGIN_PENDING': 
       return {
         ...state,
-        isLogging: true,
+        isLogging: true
       }
-    case 'LOGIN_SUCCESS':
+    case 'LOGIN_SUCCESS': 
       return {
         ...state,
-        isLogging: false,
-        logged: action.payload.success,
+        isLogging:false,
         message: action.payload.message,
+        logged: action.payload.success,
       }
-    case 'LOGIN_ERROR':
+    
+    case 'LOGIN_ERROR': 
       return {
         ...state,
-        isLogging: false,
+        isLogging:false,
         message: action.payload.message,
       }
     default:
@@ -66,41 +68,42 @@ export const onChangePassword = (event) => {
 }
 
 export const handleLogin = (email, password) => {
-
   return (dispatch) => {
     dispatch({
-      type: 'LOGIN_PENDING',
+      type: "LOGIN_PENDING"
     })
 
     const options = {
-      baseURL: 'http://localhost:4000/',
+      baseURL: 'https://trabajo-mcga-server-marc.herokuapp.com/',
       timeout: 25000,
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
     }
 
-    return fetch(`http://localhost:4000/login`, { ...options, body: JSON.stringify({ email, password }) })
+    return fetch(`https://trabajo-mcga-server-marc.herokuapp.com/login`, {
+      ...options, body: JSON.stringify({ email, password }) 
+    })
       .then(res => res.json())
-      .then(data => {
-        if (!data.success) {
-          return Promise.reject(data)
+      .then (data => { 
+        if(!data.success) {
+          return Promise.reject(data) 
         }
-        dispatch({
-          type: 'LOGIN_SUCCESS',
+        return dispatch({
+          type:'LOGIN_SUCCESS',
           payload: data,
         })
       })
-      .catch(error => {
-        dispatch({
-          type: 'LOGIN_ERROR',
-          payload: error,
+      .catch (error => {
+        return dispatch({
+          type:'LOGIN_ERROR',
+          payload: error
         })
       })
-  }
-
+    }
 }
+
 
 const middleware = [thunk]
 
