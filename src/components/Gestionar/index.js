@@ -2,14 +2,14 @@ import React from 'react'
 import Menu from '../common/menu'
 import Gestionar from '../gestionar/gestionar'
 
-const Home = () => {
+const Lista = () => {
     return (
         <React.Fragment>
             <Menu/>         
             <div className="container-fluid">
                 <div className="row">               
                     <div className="col-12">
-                        agregar imagen
+                        <Gestionar/>
                     </div>
                 </div>            
             </div> 
@@ -17,4 +17,4 @@ const Home = () => {
     )
 }
 
-export default Home 
+export default Lista 
