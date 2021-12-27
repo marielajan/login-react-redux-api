@@ -47,7 +47,7 @@ const Lista = () => {
                 </thead>
                 <tbody>
                     {personals.length === 0
-                        ? 'No hay Peliculas'
+                        ? 'No hay Personal para mostrar'
                         : personals.map ((personal) => (
                             <List key={personal._id} personal={personal} />
                          ))

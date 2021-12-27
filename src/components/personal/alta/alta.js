@@ -61,7 +61,7 @@ const Alta = () => {
                 <Form.Control placeholder="1234 Main St" />
                 </Form.Group>
 
-            {/* <Row className="mb-3">
+             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridZip">
                 <Form.Label>Legajo</Form.Label>
                 <Form.Control />
@@ -79,12 +79,12 @@ const Alta = () => {
                 <Form.Label>Ciudad</Form.Label>
                 <Form.Control />
                 </Form.Group>
-            </Row> */}
+            </Row> 
 
-            {/* <Form.Group className="mb-3" controlId="formGridAddress2">
+            <Form.Group className="mb-3" controlId="formGridAddress2">
                 <Form.Label>Dirección </Form.Label>
                 <Form.Control placeholder="Calle, número, piso, depto" />
-            </Form.Group> */}
+            </Form.Group>
 
             <Form.Group className="mb-3" id="formGridCheckbox">
                 <Form.Check type="checkbox" label="Activo" />

@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from '../../common/menu'
-import Alta from './alta'
+import Alta from '../alta'
 
 const Formulario = () => {
     return (
