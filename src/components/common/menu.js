@@ -21,7 +21,7 @@ const Menu = () => {
                 <Nav.Link href="/home">Home</Nav.Link>
                 <Nav.Link href="/gestionar">Gestionar</Nav.Link>
                 <Nav.Link href="/contacto">Contacto</Nav.Link>
-                <Nav.Link href="#action2">Salir</Nav.Link>
+                <Nav.Link href="/">Salir</Nav.Link>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

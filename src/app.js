@@ -8,6 +8,7 @@ import Home from './components/home'
 import Gestionar from './components/gestionar'
 import Alta from './components/alta'
 import Contacto from './components/contacto'
+import Logout from './components/logout'
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <Route exact path={'/gestionar'} component={Gestionar} />
       <Route exact path={'/alta'} component={Alta} />
       <Route exact path={'/contacto'} component={Contacto} />
+      <Route exact path={'/logout'} component={Logout} />
+
     </Router>
   );
 }
