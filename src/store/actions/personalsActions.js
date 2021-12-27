@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import client from '../../config/axios';
 import {
   ADD_PERSONAL,
-  ADD_FILM_SUCCESS,
+  ADD_PERSONAL_SUCCESS,
   ADD_PERSONAL_ERROR,
   EDIT_PERSONAL,
   EDIT_PERSONAL_SUCCESS,
@@ -10,9 +10,9 @@ import {
   DELETE_PERSONAL,
   DELETE_PERSONAL_SUCCESS,
   DELETE_PERSONAL_ERROR,
-  GET_PERSONAL,
-  GET_PERSONAL_SUCCESS,
-  GET_PERSONAL_ERROR,
+  GET_PERSONALS,
+  GET_PERSONALS_SUCCESS,
+  GET_PERSONALS_ERROR,
 } from '../../types/personals';
 
 const personalUrl = '/personal';
@@ -68,7 +68,7 @@ export function getAllPersonalsAction() {
   return async (dispatch) => {
     dispatch(getAllPersonals());
     try {
-      const { data } = await client.get(`${filmUrl}/all`);
+      const { data } = await client.get(`${personalUrl}/all`);
       dispatch(getAllPersonalsSuccess(data));
     } catch (error) {
       console.error(error);

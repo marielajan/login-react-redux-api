@@ -1,15 +1,15 @@
 import React from 'react'
-import Menu from '../common/menu'
-import Gestionar from '../gestionar/gestionar'
+import Menu from '../../common/menu'
+import Alta from './alta'
 
-const Lista = () => {
+const Formulario = () => {
     return (
         <React.Fragment>
             <Menu/>         
             <div className="container-fluid">
                 <div className="row">               
                     <div className="col-12">
-                        <Gestionar/>
+                        <Alta/>
                     </div>
                 </div>            
             </div> 
@@ -17,4 +17,4 @@ const Lista = () => {
     )
 }
 
-export default Lista 
+export default Formulario 

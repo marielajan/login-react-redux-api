@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from '../common/menu'
-import Logout from '../logout/logout'
+import Logout from './logout'
 
 const Salir = () => {
     return (
