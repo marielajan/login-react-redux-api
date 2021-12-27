@@ -43,7 +43,7 @@ const Alta = () => {
             <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" 
+                <Form.Control type="email" placeholder="E-mail" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)} 
                 />
@@ -58,7 +58,7 @@ const Alta = () => {
 
                 <Form.Group className="mb-3" controlId="formGridNombre">
                 <Form.Label>Nombre y Apellido</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
+                <Form.Control placeholder="Nombre y Apellido" />
                 </Form.Group>
 
              <Row className="mb-3">
