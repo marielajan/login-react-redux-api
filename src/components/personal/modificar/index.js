@@ -1,15 +1,15 @@
 import React from 'react'
-import Menu from '../common/menu'
-import Logout from './logout'
+import Menu from '../../common/menu'
+import Modificar from './modificar'
 
-const Salir = () => {
+const Editar = () => {
     return (
         <React.Fragment>
             <Menu/>         
             <div className="container-fluid">
                 <div className="row">               
                     <div className="col-12">
-                        <Logout/>
+                        <Modificar/>
                     </div>
                 </div>            
             </div> 
@@ -17,4 +17,4 @@ const Salir = () => {
     )
 }
 
-export default Salir 
+export default Editar 

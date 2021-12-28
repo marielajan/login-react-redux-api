@@ -30,8 +30,8 @@ const Login = (props) => {
   return (
     <div className={styles.container}>
       <div className={
-styles.box
-}>
+        styles.box
+        }>
         <h1 className={styles.loginText}>Iniciar sesión</h1>
         <input
           type="text"

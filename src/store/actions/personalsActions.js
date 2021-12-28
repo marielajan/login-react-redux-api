@@ -133,10 +133,31 @@ const deletePersonalError = (status) => ({
 export const editPersonalAction = (personal) => {
   return async (dispatch) => {
     dispatch(editPersonal(personal));
+    try {
+      await client.put(`${personalUrl}`,personal);
+      dispatch(editPersonalSuccess(personal));
+      
+        Swal.fire
+        (
+                'Editado',
+                'El personal se edito correctamente...',
+                'success'
+              );
+            } catch (error) {
+              console.error(error);
+              dispatch(editPersonalError(true));
+              
+        Swal.fire
+        ({
+                icon: 'error',
+                title: 'Ocurrio un error.',
+                text: 'Ocurrio un error al editar el personal, intenta de nuevo.',
+              });
+            } 
   };
 };
 
-const editPersonal = (personal) => ({
+export const editPersonal = (personal) => ({
   type: EDIT_PERSONAL,
   payload: personal,
 });

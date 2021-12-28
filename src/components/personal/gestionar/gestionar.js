@@ -5,13 +5,13 @@ import Swal from 'sweetalert2'
 
 import {
     deletePersonalAction,
-    editPersonalAction,
+    editPersonal,
 } from '../../../store/actions/personalsActions'; 
 
 const Gestionar = ({personal}) => { 
     const {_id, nombre, email, estado } = personal;
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch(); 
     const history = useHistory(); // Habilitar history para redireccionar.
 
     const onDeletePersonal = (id) => {
@@ -34,8 +34,8 @@ const Gestionar = ({personal}) => {
     };
 
     const onEditRedirection = (id) => {
-        dispatch(editPersonalAction(personal));
-        history.push(`/personal/modificar/modificar/${id}`);
+        dispatch(editPersonal(personal));
+        history.push(`/modificar/${id}`);
     }; 
     return (
        

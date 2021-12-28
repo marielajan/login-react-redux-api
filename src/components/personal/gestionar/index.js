@@ -12,9 +12,8 @@ const Lista = () => {
         const getAllPersonals = () => dispatch(getAllPersonalsAction());
         getAllPersonals();
         
-      },[]);  
+    },[]);  
 
-       
     const { loading, error, personals } = useSelector((state) => state.personals); 
     return (
         <React.Fragment>
@@ -23,19 +22,20 @@ const Lista = () => {
                 <div className="row">               
                     <div className="col-12">
                     <br></br>
-            <div class="row">
-                <div class="col-2">
-                    <a href="/alta" class="btn btn-primary" role="button">Agregar</a> 
-                </div>
-            </div>         
-            <br></br>
+                <div class="row">
+                    <div class="col-2">
+                        <a href="/alta" class="btn btn-primary" role="button">Agregar</a> 
+                    </div>
+                </div>         
+                <br></br>
             {loading ? <h4 className='text-center'> Loading... </h4> : null}
 
             {error ? (
                 <p className='alert alert-danger p-2 m-4 text-center'>
                     Ocurrio un error.
                 </p>
-            ) : null} 
+            ) : null}  
+            
             <table className="table table-hover">
                 <thead>
                     <tr>
