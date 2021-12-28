@@ -29,7 +29,7 @@ export const handleLogin = (email, password) => {
     })
 
     const options = {
-      baseURL: 'http://localhost:4000',
+      baseURL: 'https://trabajo-mcga-server-mariel-jan.herokuapp.com/',
       timeout: 25000,
       method: 'POST',
       headers: {
@@ -37,7 +37,7 @@ export const handleLogin = (email, password) => {
       },
     }
 
-    return fetch(`http://localhost:4000/login`, {
+    return fetch(`https://trabajo-mcga-server-mariel-jan.herokuapp.com/login`, {
       ...options, body: JSON.stringify({ email, password }) 
     })
       .then(res => res.json())
