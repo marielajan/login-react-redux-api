@@ -18,7 +18,7 @@ import {
     personals: [],
     error: null,
     loading: false,
-    film: null,
+    personal: null,
   };
   
   export default function (state = initialState, action) {
@@ -78,7 +78,7 @@ import {
           ...state,
           loading: false,
           personals: state.personals.filter(
-            (film) => film._id !== action.payload
+            (personal) => personal._id !== action.payload
           ),
           error: false,
         };
@@ -95,7 +95,7 @@ import {
         return {
           ...state,
           loading: false,
-          film: action.payload,
+          personal: action.payload,
         };
   
       case EDIT_PERSONAL_SUCCESS:
@@ -103,7 +103,7 @@ import {
           ...state,
           loading: false,
           personals: state.personals.filter(
-            (film) => film._id !== action.payload
+            (personal) => personal._id !== action.payload
           ),
           error: false,
         };
