@@ -62,7 +62,6 @@ const Gestionar = ({personal}) => {
                 </div> 
             </td>
         </tr>
-
     )
 }
 

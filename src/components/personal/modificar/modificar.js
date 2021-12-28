@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Row, Button, Col } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import { editPersonalAction } from '../../../store/actions/personalsActions'; 
 import { useHistory } from 'react-router-dom';
 
@@ -33,15 +33,9 @@ const ModificarDatos = () => {
 
     const onSubmit = (e) => {
         const form = e.currentTarget;
-        // if (form.checkValidity() === false) {
-        //   e.preventDefault();
-        //   e.stopPropagation();
-        // }
         editPersonal(personalState);
-        //setValidated(true);
         history.push(`/gestionar`);
     }; 
-
 
     return (
         <Form onSubmit={onSubmit} >

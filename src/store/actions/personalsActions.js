@@ -136,24 +136,23 @@ export const editPersonalAction = (personal) => {
     try {
       await client.put(`${personalUrl}`,personal);
       dispatch(editPersonalSuccess(personal));
-      
-        Swal.fire
+      Swal.fire
         (
-                'Editado',
-                'El personal se edito correctamente...',
-                'success'
-              );
-            } catch (error) {
-              console.error(error);
-              dispatch(editPersonalError(true));
-              
+          'Editado',
+          'El personal se edito correctamente...',
+          'success'
+        );
+      } 
+    catch (error) {
+      console.error(error);
+      dispatch(editPersonalError(true));
         Swal.fire
-        ({
-                icon: 'error',
-                title: 'Ocurrio un error.',
-                text: 'Ocurrio un error al editar el personal, intenta de nuevo.',
-              });
-            } 
+          ({
+            icon: 'error',
+            title: 'Ocurrio un error.',
+            text: 'Ocurrio un error al editar el personal, intenta de nuevo.',
+        });
+      } 
   };
 };
 
